@@ -1,0 +1,93 @@
+/* Base Application Styles */
+body {background: #ffffff;padding: 0;margin: 0;}
+*{padding: 0;margin: 0;}
+.components-header{
+  height: 50px;
+  background: #333;
+  padding: 0 50px;
+  .title{
+    color: #ffffff;
+    margin: 0;line-height: 50px;
+  }
+}
+.components-progress{
+  display: inline-block;
+  width: 80%;
+  height: 3px;
+  background: #f2f2f2;
+  cursor: pointer;
+  margin-top: 20px;
+  position: relative;
+  .progress-bar{
+    width: 20%;
+    background: #333;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+  }
+  span{
+    display: inline-block;
+    margin-left: 500px;
+    position: absolute;
+    top: -6px;
+  }
+}
+.component-player{
+  width: 100%;
+  max-width: 780px;
+  margin: 80px auto;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  padding: 20px;
+  .player-left{width: 60%;display: inline-block;
+    .music-name{margin: 10px 0;}
+    .music-singer{font-size: 12px;color: #999999;}
+    .progress-part{
+      position: relative;
+      span{font-size: 12px;position: absolute;top: 15px;right: 0;}
+    }
+  }
+  .player-right{width: 40%;display: inline-block;
+    img{margin: 0 auto;display: block;border-radius: 50%;animation: rotateInfinite 6s infinite linear;}
+    @keyframes rotateInfinite {
+      from{transform:rotate(0)}
+      to{transform:rotate(360deg)}
+    }
+  }
+  .player-controller{
+    width: 50%;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .player-icon{
+      display: inline-block;
+      cursor: pointer;
+      font-size: 22px;
+    }
+  }
+}
+.component-musicList{
+  width: 100%;
+  max-width: 780px;
+  margin: 80px auto;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  padding: 20px;
+  .component-musicItem{
+    width: 100%;
+    list-style: none;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    p{
+      display: inline-block;
+    }
+    .musicItem-op{float: right;}
+  }
+  .focus{
+    .music-info{color: #C20C0C;}
+  }
+}
